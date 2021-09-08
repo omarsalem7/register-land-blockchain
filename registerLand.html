@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles/registerLand.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script src="./scripts/main.js"></script>
+   
+</head>
+
+<body>
+
+    <button class="back_btn" onclick="goBack()">
+        <div class="bk-btn">
+            <div class="bk-btn-triangle"></div>
+            <div class="bk-btn-bar"></div>
+        </div>
+    </button>
+
+
+    <div class="container" id="container">
+
+        <div class="form-container register-container">
+            <form action="#">
+                <h1>Register Land</h1>
+
+                <br>
+                <input type="text" placeholder="Location" />
+                <input type="text" placeholder="Cost" />
+
+                <button class="custom-btn">Register</button>
+            </form>
+        </div>
+
+
+
+        <!-- popup -->
+        <div class="custom-model-main">
+            <div class="custom-model-inner">
+                <div class="close-btn">×</div>
+                <div class="custom-model-wrap">
+                    <div class="pop-up-content-wrap">
+                        <table id="lands">
+                            <tr>
+                                <th>Land Id</th>
+                                <th>Lacation</th>
+                                <th>cost</th>
+                            </tr>
+                            <tr>
+                                <td>12335</td>
+                                <td>21 timesqure - Us</td>
+                                <td>2000$</td>
+                            </tr>
+                            <tr>
+                                <td>1212</td>
+                                <td>Bernauer Straße-berlin- german</td>
+                                <td>1500$</td>
+                            </tr>
+
+
+                            <tr>
+                                <td>48451</td>
+                                <td>Ebertstraße-berlin-german</td>
+                                <td>1800$</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-overlay"></div>
+        </div>
+        <!--end popup  -->
+
+
+
+        <div class="overlay-container">
+            <div class="overlay">
+
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Owner!</h1>
+                    <br><br>
+                    <button class="ghost custom-btn Click-here" id="signUp">view Land Listings</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+        $(".Click-here").on('click', function () {
+            $(".custom-model-main").addClass('model-open');
+        });
+        $(".close-btn, .bg-overlay").click(function () {
+            $(".custom-model-main").removeClass('model-open');
+        });
+    </script>
+</body>
+
+</html>
